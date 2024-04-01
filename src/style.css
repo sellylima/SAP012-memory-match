@@ -15,48 +15,70 @@
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: 100wv;
   height: 100vh;
   background: url("./img/bg.jpg");
   background-size: cover;
+  align-items: center;
 }
 
-h1 {
+.titulo {
   font-size: 90px;
   font-family: "Press Start 2P", system-ui;
-  text-align: center;
   color: var(--branco);
   padding-top: 5rem;
 }
 
-h2 {
+.subtitulo {
   color: var(--branco);
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
   font-family: "Inter", sans-serif;
-  padding-top: 2rem;
+  padding: 2.5rem 0;
   font-weight: 300;
 }
 
-button {
+.form_login{
+  display: flex;
+  align-items: center;
+  padding-top: 1em;
+  gap: 1.5em;
+}
+
+#form_input {
+  background: #d7fddb;
+  color: #093f10;
+  font-size: 16px;
+  outline: none;
+  padding: 1em 2em;
+  border-radius: 5px;
+}
+
+#form_button {
   background: var(--bt-primary);
   color: var(--branco);
-  padding: 1.5rem 4rem;
-  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
   border: solid 2px #fff;
-  margin: 0 auto;
-  display: block;
-  margin-top: 3rem;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-button:hover {
+#form_button:disabled {
+  background-color: #d2d1d1;
+  border: none;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* button:hover {
   background: var(--bt-hover);
-}
+} */
 
-img {
+.bg__card {
   width: 100%;
   height: 45%;
   background-size: cover;
