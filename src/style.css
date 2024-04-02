@@ -33,27 +33,11 @@ main {
 
 .subtitulo {
   color: var(--branco);
-  font-size: 26px;
+  font-size: 22px;
   text-align: center;
   font-family: "Inter", sans-serif;
   padding: 2.5rem 0;
   font-weight: 300;
-}
-
-.form_login{
-  display: flex;
-  align-items: center;
-  padding-top: 1em;
-  gap: 1.5em;
-}
-
-#form_input {
-  background: #d7fddb;
-  color: #093f10;
-  font-size: 16px;
-  outline: none;
-  padding: 1em 2em;
-  border-radius: 5px;
 }
 
 #form_button {
@@ -74,13 +58,28 @@ main {
   cursor: auto;
 }
 
-/* button:hover {
-  background: var(--bt-hover);
-} */
+@media screen and (max-width: 480px) {
+  main {
+    padding-top: 10em;
+  }
 
-.bg__card {
-  width: 100%;
-  height: 45%;
-  background-size: cover;
-  margin-top: 9rem;
+  .titulo {
+    font-size: 45px;
+    padding-left: 0.5rem;
+    text-align: center;
+    line-height: 1.2em;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+  }
+
+  #form_button {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
 }
