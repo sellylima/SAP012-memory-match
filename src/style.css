@@ -40,7 +40,48 @@ main {
   font-weight: 300;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 210px);
+  gap: 1.5em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cards {
+  margin-top: 5rem;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  position: relative;
+  /* transição começa devagar e acelera no meio e desacelera no final */
+  transition: all 400ms ease;
+  background-color: #16ac28;
+}
+
+.cards:hover {
+  transform: rotateY(180deg);
+}
+
+.imagem {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.frente {
+  background-color: blue;
+  backface-visibility: hidden;
+}
+
+.verso {
+  background-color: #333;
+  background-image: url(./img/verso-card.png);
+  /* backface-visibility: hidden; */
+}
+
 #form_button {
+  margin-top: 10rem;
   background: var(--bt-primary);
   color: var(--branco);
   padding: 1rem 1.5rem;
@@ -51,12 +92,12 @@ main {
   font-weight: bold;
 }
 
-#form_button:disabled {
+/* #form_button:disabled {
   background-color: #d2d1d1;
   border: none;
   color: #aaa;
   cursor: auto;
-}
+} */
 
 @media screen and (max-width: 480px) {
   main {
