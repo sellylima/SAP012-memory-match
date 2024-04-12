@@ -45,6 +45,14 @@ const App = () => {
 let firstCard = ""; //guarda a informação da primeira carta
 let secondCard = ""; //guarda a informação da segunda carta
 
+const endGame = () => {
+  const disabledCards = document.querySelectorAll(".disabled__card");
+
+  if (disabledCards.length == 10) {
+    alert("PARABENS!! VOCÊ GANHOU!!!!!");
+  }
+};
+
 //DUPLICA CARTAS
 const duplicaCartas = () => {
   const duplicaJogo = game.concat(game); //metodo concatenação
@@ -58,29 +66,42 @@ const shuffleCards = (cartasDuplicadas) => {
   return shuffle;
 };
 
+//FINALIZA O JOGO
+// const endGame = () => {
+//   const disabledCards = el.querySelectorAll(".disabled__card");
+
+//   if (disabledCards.length == 10) {
+//     console.log("PARABENS!! VOCÊ GANHOU!!!!!");
+//   }
+// };
+
 //COMPARA SE AS CARTAS SÃO IGUAIS
 const checkCards = () => {
   const firstCardJogo = firstCard.getAttribute("data-nome-jogo");
   const secondCardJogo = secondCard.getAttribute("data-nome-jogo");
-  console.log(firstCardJogo);
-  console.log(secondCardJogo);
-  console.log(firstCard);
-  console.log(secondCard);
+
   if (firstCardJogo === secondCardJogo) {
-    //COLOCAR ALGO AQUI
+    firstCard.parentNode.classList.add("disabled__card");
+    secondCard.parentNode.classList.add("disabled__card");
+
+    firstCard = "";
+    secondCard = "";
+
+    endGame();
   } else {
     //escondendo as cartas reveladas caso a pessoa errar
     setTimeout(() => {
       firstCard.classList.remove("flip__card");
       secondCard.classList.remove("flip__card");
+
+      firstCard = "";
+      secondCard = "";
     }, "500");
   }
 };
 
 //REVELA E VERIFICA CARTA
 const flipCard = ({ target }) => {
-  // target.parentNode.classList.add("flip__card"); //o pai encontrado no parent node foi (card) e adicinado uma classe flip__card
-
   //target revela o "alvo/elemento" que esta sendo clicado
   if (target.parentNode.className.includes("flip__card")) {
     return;

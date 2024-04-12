@@ -53,7 +53,6 @@
   /* aspect-ratio: 3/4; */
   height: 300px;
   border-radius: 15px;
-  background-color: #333;
   transition: all 400ms ease;
   transform-style: preserve-3d;
   /* position: relative; respeita as delimitações do tamanho das cartas */
@@ -64,8 +63,10 @@
   transform: rotateY(180deg);
 }
 
-/* .card:hover {
-} */
+.disabled__card {
+  filter: saturate(0);
+  opacity: 0.5;
+}
 
 .face {
   width: 100%;
@@ -74,6 +75,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 15px;
+  transition: all 400ms ease;
 }
 
 .front {
