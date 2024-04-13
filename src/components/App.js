@@ -17,7 +17,7 @@ const App = () => {
   </div>
   </div>
   <form class="form_login">
-    <button type="submit" id="form_button" disabled>Jogar Novamente</button>
+    <button type="submit" id="form_button">Jogar Novamente</button>
   </form> 
   </div>
  `;
@@ -37,6 +37,13 @@ const App = () => {
 
   nodeListCard.forEach((carta) => {
     carta.addEventListener("click", flipCard);
+  });
+
+  const button = el.querySelector("#form_button");
+
+  button.addEventListener("click", () => {
+    location.reload();
+    console.log(button);
   });
 
   return el;
@@ -117,5 +124,7 @@ const flipCard = ({ target }) => {
     checkCards();
   }
 };
+
+//BUTTON
 
 export default App;
