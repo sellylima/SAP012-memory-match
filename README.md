@@ -4,7 +4,7 @@ O Memory Game é direcionado para crianças, jovens e adolescentes conectados ao
 [video-memory.webm](https://github.com/sellylima/SAP012-memory-match/assets/71739592/54128a56-4198-4218-ab12-d65f075bafbf)
 
 
-:card_index_dividers:## Índice
+## :card_index_dividers: Índice
 
 - Caracteristicas
 - História do usuário
