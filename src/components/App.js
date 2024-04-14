@@ -39,6 +39,7 @@ const App = () => {
     carta.addEventListener("click", flipCard);
   });
 
+  //RELOAD BOTAO
   const button = el.querySelector("#form_button");
 
   button.addEventListener("click", () => {
@@ -52,13 +53,6 @@ const App = () => {
 let firstCard = ""; //guarda a informação da primeira carta
 let secondCard = ""; //guarda a informação da segunda carta
 
-const endGame = () => {
-  const disabledCards = document.querySelectorAll(".disabled__card");
-
-  if (disabledCards.length == 10) {
-    alert("PARABENS!! VOCÊ GANHOU!!!!!");
-  }
-};
 
 //DUPLICA CARTAS
 const duplicaCartas = () => {
@@ -72,15 +66,6 @@ const shuffleCards = (cartasDuplicadas) => {
   //   console.log(shuffle);
   return shuffle;
 };
-
-//FINALIZA O JOGO
-// const endGame = () => {
-//   const disabledCards = el.querySelectorAll(".disabled__card");
-
-//   if (disabledCards.length == 10) {
-//     console.log("PARABENS!! VOCÊ GANHOU!!!!!");
-//   }
-// };
 
 //COMPARA SE AS CARTAS SÃO IGUAIS
 const checkCards = () => {
@@ -125,6 +110,13 @@ const flipCard = ({ target }) => {
   }
 };
 
-//BUTTON
+//FINALIZA O GAME
+const endGame = () => {
+  const disabledCards = document.querySelectorAll(".disabled__card");
+
+  if (disabledCards.length == 10) {
+    alert("PARABENS!! VOCÊ GANHOU!!!!!");
+  }
+};
 
 export default App;
