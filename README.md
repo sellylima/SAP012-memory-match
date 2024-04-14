@@ -13,25 +13,18 @@ O Memory Game é direcionado para crianças, jovens e adolescentes conectados ao
 
 ## Características
 
-1.O jogo possui um total de 10 cartas viradas para baixo e quando clicadas aparece o nome do respectivo game.<br>
-2. Dado um set de cartas, as cartas são embaralhadas antes de ser mostrada na interface.<br>
-3. Permite o jogador virar a carta de 2 em 2.<br>
-4. Os pares encontrados permanecem viradas para cima.<br>
-5. Ao encontrar todas as imagens o jogador recebe uma mensagem de concluído.<br>
-6. Botão de reload para iniciar uma nova partida.<br>
+1.O jogo possui um total de 10 cartas viradas para baixo e quando clicadas aparece o nome do respectivo game.<br> 2. Dado um set de cartas, as cartas são embaralhadas antes de ser mostrada na interface.<br> 3. Permite o jogador virar a carta de 2 em 2.<br> 4. Os pares encontrados permanecem viradas para cima.<br> 5. Ao encontrar todas as imagens o jogador recebe uma mensagem de concluído.<br> 6. Botão de reload para iniciar uma nova partida.<br>
 
 ## História do usuário
 
 Como um jovem entusiasta de jogos conectado ao universo dos jogos, eu quero jogar o Memory Game com meus amigos, desafiando-os a superar minhas pontuações, para que possamos competir e nos divertir juntos, testando nossa agilidade, concentração e raciocínio lógico.
 
 ## Protótipo e design
+
 O Design foi desenvolvido na ferramenta figma. <br><br>
-__Protótipo de baixa qualidade__<br>
+**Protótipo de baixa qualidade**<br>
 
-
-__Protótipo de alta qualidade__
-
-
+**Protótipo de alta qualidade**
 
 ## Pontos de melhoria
 
