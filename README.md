@@ -30,10 +30,10 @@ Como um jovem entusiasta de jogos conectado ao universo dos jogos, eu quero joga
 ## :art: Protótipo e design
 O Design foi desenvolvido na ferramenta figma. <br><br>
 __Protótipo de baixa qualidade__<br>
-![](./img/prototipo-baixa.png)
+![](../img/prototipo-baixa.png)
 
 __Protótipo de alta qualidade__
-![](./img/prototipo-alta.png)
+![](../img/prototipo-alta.png)
 
 
 ## :pushpin:Pontos de melhoria
