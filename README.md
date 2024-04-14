@@ -33,7 +33,7 @@ __Protótipo de alta qualidade__
 
 ![prototipo-alta](https://github.com/sellylima/SAP012-memory-match/assets/71739592/608f9c9e-8f99-4283-a6a3-3f55dbb3a184)
 
-<br>
+
 ## :pushpin:Pontos de melhoria
 
 -Incluir temporizador para medir o tempo de cada jogador.
