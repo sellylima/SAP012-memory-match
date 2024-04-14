@@ -25,10 +25,13 @@ Como um jovem entusiasta de jogos conectado ao universo dos jogos, eu quero joga
 ## :art: Protótipo e design
 O Design foi desenvolvido na ferramenta figma. <br><br>
 __Protótipo de baixa qualidade__<br>
-![](../img/prototipo-baixa.png)
+
+![prototipo-baixa](https://github.com/sellylima/SAP012-memory-match/assets/71739592/8d705e11-e47e-457c-a844-47921a5c0f3e)
+
 
 __Protótipo de alta qualidade__
-![](../img/prototipo-alta.png)
+
+![prototipo-alta](https://github.com/sellylima/SAP012-memory-match/assets/71739592/608f9c9e-8f99-4283-a6a3-3f55dbb3a184)
 
 
 ## :pushpin:Pontos de melhoria
