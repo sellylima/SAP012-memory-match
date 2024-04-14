@@ -1,4 +1,4 @@
-:video_game:# Memory Game
+#:video_game: Memory Game
 
 O Memory Game é direcionado para crianças, jovens e adolescentes conectados ao universo dos jogos. O jogo busca testar a agilidade, concentração e racíocinio lógico, características essenciais que proporciona diversos benefícios.<br>
 
