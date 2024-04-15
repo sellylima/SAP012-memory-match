@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Press+Start+2P&display=swap");
 
+:root {
+  --branco: #fff;
+  --bt-primary: #037c13;
+  --bt-hover: #16ac28;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* overflow: hidden; */
-}
-
-:root {
-  --branco: #fff;
-  --bt-primary: #13761f;
-  --bt-hover: #16ac28;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #root {
@@ -26,7 +27,8 @@
   font-size: 90px;
   font-family: "Press Start 2P", system-ui;
   color: var(--branco);
-  padding-top: 4rem;
+  padding-top: 3.3rem;
+  text-align: center;
 }
 
 .subtitulo {
@@ -34,33 +36,31 @@
   font-size: 22px;
   text-align: center;
   font-family: "Inter", sans-serif;
-  padding: 2.5rem 0;
+  padding: 1.8rem 0;
   font-weight: 300;
 }
 
 .card__container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* grid-auto-rows: 300px; */
-  gap: 1em;
-  /* width: 100%; */
-  /* margin: 0 auto; */
-  /* max-width: 800px; */
+  gap: 1.4em;
 }
 
 .card {
   width: 210px;
-  /* aspect-ratio: 3/4; */
-  height: 300px;
+  height: 270px;
   border-radius: 15px;
   transition: all 400ms ease;
   transform-style: preserve-3d;
-  /* position: relative; respeita as delimitações do tamanho das cartas */
+  border: solid 2px #092e40;
 }
 
 .flip__card {
-  /* revelar carta */
   transform: rotateY(180deg);
+}
+
+.disabled__card {
+  filter: saturate(0);
 }
 
 .face {
@@ -83,16 +83,20 @@
 #form_button {
   margin-left: 30em;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   background: var(--bt-primary);
   color: var(--branco);
   padding: 1rem 1.5rem;
   margin-bottom: 3rem;
   border-radius: 5px;
-  border: solid 2px #fff;
+  border: solid 2px var(--branco);
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+}
+
+#form_button:hover {
+  background-color:var(--bt-hover) ;
 }
 
 @media screen and (max-width: 480px) {

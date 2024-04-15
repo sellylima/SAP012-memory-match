@@ -4,7 +4,7 @@ import game from "../data/game/game.js";
 const App = () => {
   const el = document.createElement("div");
 
-  const arrayCartas = shuffleCards(duplicaCartas());
+  const arrayCards = shuffleCards(duplicateCards());
 
   el.className = "App";
   el.innerHTML = `<div>
@@ -24,7 +24,7 @@ const App = () => {
 
   const cardContainer = el.querySelector(".card__container");
 
-  arrayCartas.forEach((carta) => {
+  arrayCards.forEach((carta) => {
     cardContainer.innerHTML += `
     <div class="card"  >
     <div class="face  front"><img src="img/${carta.image}.png"></div>
@@ -44,7 +44,6 @@ const App = () => {
 
   button.addEventListener("click", () => {
     location.reload();
-    console.log(button);
   });
 
   return el;
@@ -53,17 +52,16 @@ const App = () => {
 let firstCard = ""; //guarda a informação da primeira carta
 let secondCard = ""; //guarda a informação da segunda carta
 
-
 //DUPLICA CARTAS
-const duplicaCartas = () => {
+const duplicateCards = () => {
   const duplicaJogo = game.concat(game); //metodo concatenação
   return duplicaJogo;
 };
 
 //EMBARALHAR CARTAS
-const shuffleCards = (cartasDuplicadas) => {
-  const shuffle = cartasDuplicadas.sort(() => Math.random() - 0.5); //função que retorna um numero aleatório
-  //   console.log(shuffle);
+
+export const shuffleCards = (cartasDuplicadas) => {
+  const shuffle = [...cartasDuplicadas].sort(() => Math.random() - 0.5); //função que retorna um numero aleatório
   return shuffle;
 };
 
@@ -93,7 +91,7 @@ const checkCards = () => {
 };
 
 //REVELA E VERIFICA CARTA
-const flipCard = ({ target }) => {
+export const flipCard = ({ target }) => {
   //target revela o "alvo/elemento" que esta sendo clicado
   if (target.parentNode.className.includes("flip__card")) {
     return;
@@ -111,7 +109,7 @@ const flipCard = ({ target }) => {
 };
 
 //FINALIZA O GAME
-const endGame = () => {
+export const endGame = () => {
   const disabledCards = document.querySelectorAll(".disabled__card");
 
   if (disabledCards.length == 10) {
