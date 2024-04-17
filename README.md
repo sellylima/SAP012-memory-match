@@ -2,7 +2,7 @@
 
 O Memory Game é direcionado para crianças, jovens e adolescentes conectados ao universo dos jogos. O jogo busca testar a agilidade, concentração e racíocinio lógico, características essenciais que proporciona diversos benefícios.<br>
 
-[video-memory.webm](https://github.com/sellylima/SAP012-memory-match/assets/71739592/54128a56-4198-4218-ab12-d65f075bafbf)
+[video-memory-game.webm](https://github.com/sellylima/memory-game/assets/71739592/4f2bd575-4e25-4231-b9c4-4a648b2be565)
 
 
 ## :card_index_dividers: Índice
@@ -36,11 +36,11 @@ __Protótipo de alta qualidade__
 
 ## :pushpin:Pontos de melhoria
 
--Incluir temporizador para medir o tempo de cada jogador.
--Controlar o número de tentativas de acordo com cada jogador virando as cartas.
--Adicionar tela de login para salvar o nome da pessoa e exibir na tela principal.
--Aumentar a quatidade de cartas de acordo com o nivel do jogo.
--Implementar som com base em jogos.
+- Incluir temporizador para medir o tempo de cada jogador.
+- Controlar o número de tentativas de acordo com cada jogador virando as cartas.
+- Adicionar tela de login para salvar o nome da pessoa e exibir na tela principal.
+- Aumentar a quatidade de cartas de acordo com o nivel do jogo.
+- Implementar som com base em jogos.
 <br>
 ## :hammer_and_wrench:Recursos utilizados
 
