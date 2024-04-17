@@ -36,11 +36,11 @@ __Protótipo de alta qualidade__
 
 ## :pushpin:Pontos de melhoria
 
--Incluir temporizador para medir o tempo de cada jogador.
--Controlar o número de tentativas de acordo com cada jogador virando as cartas.
--Adicionar tela de login para salvar o nome da pessoa e exibir na tela principal.
--Aumentar a quatidade de cartas de acordo com o nivel do jogo.
--Implementar som com base em jogos.
+- Incluir temporizador para medir o tempo de cada jogador.
+- Controlar o número de tentativas de acordo com cada jogador virando as cartas.
+- Adicionar tela de login para salvar o nome da pessoa e exibir na tela principal.
+- Aumentar a quatidade de cartas de acordo com o nivel do jogo.
+- Implementar som com base em jogos.
 <br>
 ## :hammer_and_wrench:Recursos utilizados
 
