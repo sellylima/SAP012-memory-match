@@ -17,6 +17,7 @@
 }
 
 #root {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: url(./img/bg.jpg);
