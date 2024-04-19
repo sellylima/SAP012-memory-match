@@ -3,6 +3,7 @@ import { shuffleCards } from "./App.js";
 import { flipCard } from "./App.js";
 import { endGame } from "./App.js";
 
+
 describe("App", () => {
   it("should render without crashing", () => {
     const el = App();
@@ -62,28 +63,33 @@ describe("flipCard", () => {
 });
 
 describe("endGame", () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
   it("deverá mostrar uma mensagem de parabéns se houver 10 cartões desativados", () => {
+    const spyOn = jest.spyOn(document, 'querySelectorAll').mockImplementationOnce(() => ({length: 10}));
+    const spyOnAlert = jest.spyOn(window, 'alert').mockImplementationOnce((banana) => banana );
     // Chama a função endGame
     endGame();
 
     // Verifica se o método querySelectorAll foi chamado com o seletor correto
-    expect(document.querySelectorAll).toHaveBeenCalledWith(".disabled__card");
+    expect(spyOn).toHaveBeenCalledWith(".disabled__card");
 
     // Verifica se a mensagem de parabéns foi exibida
-    expect(window.alert).toHaveBeenCalledWith("PARABÉNS!! VOCÊ GANHOU!!!!!");
+    expect(spyOnAlert).toHaveBeenCalledWith("PARABÉNS!! VOCÊ GANHOU!!!!!");
   });
 
   it("não deve mostrar mensagem de felicitações se houver menos de 10 cartões desativados", () => {
     // Simula que existem menos de 10 cartas desabilitadas
-    document.querySelectorAll.mockReturnValue(() => ({ length: 9 }));
-
+    const spyOn = jest.spyOn(document, 'querySelectorAll').mockImplementationOnce(() => ({length: 9}));
+    const spyOnAlert = jest.spyOn(window, 'alert').mockImplementationOnce(() => ({length: 9}));
     // Chama a função endGame
     endGame();
 
     // Verifica se o método querySelectorAll foi chamado com o seletor correto
-    expect(document.querySelectorAll).toHaveBeenCalledWith(".disabled__card");
+    expect(spyOn).toHaveBeenCalledWith(".disabled__card");
 
     // Verifica se a mensagem de parabéns não foi exibida
-    expect(window.alert).not.toHaveBeenCalled();
+    expect(spyOnAlert).not.toHaveBeenCalled();
   });
 });

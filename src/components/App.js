@@ -1,6 +1,6 @@
 import game from "../data/game/game.js";
 
-//  HTML
+//   ESTRUTURA HTML DINAMICA
 const App = () => {
   const el = document.createElement("div");
 
@@ -27,8 +27,8 @@ const App = () => {
   arrayCards.forEach((carta) => {
     cardContainer.innerHTML += `
     <div class="card"  >
-    <div class="face  front"><img src="img/${carta.image}.png"></div>
-    <div class="face  back" data-nome-jogo="${carta.image}"><img src="img/verso-card.png"></div>
+    <div class="face  front"><img src="../img/${carta.image}.png"></div>
+    <div class="face  back" data-nome-jogo="${carta.image}"><img src="../img/verso-card.png"></div>
   </div>
     `;
   });
@@ -54,30 +54,31 @@ let secondCard = ""; //guarda a informação da segunda carta
 
 //DUPLICA CARTAS
 const duplicateCards = () => {
-  const duplicaJogo = game.concat(game); //metodo concatenação
+  const duplicaJogo = game.concat(game); //metodo concatenação com array de objetos
   return duplicaJogo;
 };
 
 //EMBARALHAR CARTAS
 
 export const shuffleCards = (cartasDuplicadas) => {
-  const shuffle = [...cartasDuplicadas].sort(() => Math.random() - 0.5); //função que retorna um numero aleatório
+  const shuffle = [...cartasDuplicadas].sort(() => Math.random() - 0.5); // uso operador spread(´...´) para evitar a modifiação atual função que retorna um numero aleatório 
   return shuffle;
 };
 
-//COMPARA SE AS CARTAS SÃO IGUAIS
+//COMPARA SE AS CARTAS SÃO IGUAIS E DESVIRA
 const checkCards = () => {
-  const firstCardJogo = firstCard.getAttribute("data-nome-jogo");
+  const firstCardJogo = firstCard.getAttribute("data-nome-jogo"); //get função que pega um pedaço de um elemento especifico
   const secondCardJogo = secondCard.getAttribute("data-nome-jogo");
 
   if (firstCardJogo === secondCardJogo) {
     firstCard.parentNode.classList.add("disabled__card");
     secondCard.parentNode.classList.add("disabled__card");
 
-    firstCard = "";
+    firstCard = "";   //string vazia, p/ que ela não seja mais considerada como uma carta selecionada
     secondCard = "";
 
-    endGame();
+    endGame();    // chamei a função para verificar se todas as cartas foram encontradas e encerrar o jogo se for o caso
+
   } else {
     //escondendo as cartas reveladas caso a pessoa errar
     setTimeout(() => {
@@ -86,14 +87,14 @@ const checkCards = () => {
 
       firstCard = "";
       secondCard = "";
-    }, "500");
+    }, "500");  //definido tempo limite 
   }
 };
 
 //REVELA E VERIFICA CARTA
 export const flipCard = ({ target }) => {
   //target revela o "alvo/elemento" que esta sendo clicado
-  if (target.parentNode.className.includes("flip__card")) {
+  if (target.parentNode.className.includes("flip__card")) {  // verifica se o elemento pai (parentNode) do elemento alvo (target) possui uma classe chamada "flip__card"
     return;
   }
 
@@ -113,7 +114,7 @@ export const endGame = () => {
   const disabledCards = document.querySelectorAll(".disabled__card");
 
   if (disabledCards.length == 10) {
-    alert("PARABENS!! VOCÊ GANHOU!!!!!");
+    alert("PARABÉNS!! VOCÊ GANHOU!!!!!");
   }
 };
 
