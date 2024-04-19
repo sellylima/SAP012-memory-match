@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Press+Start+2P&display=swap");
+
+:root {
+  --branco: #fff;
+  --bt-primary: #037c13;
+  --bt-hover: #16ac28;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url(./img/bg.jpg);
+  background-size: cover;
+  align-items: center;
+
+}
+
+.titulo {
+  font-size: 90px;
+  font-family: "Press Start 2P", system-ui;
+  color: var(--branco);
+  padding-top: 3.3rem;
+  text-align: center;
+}
+
+.subtitulo {
+  color: var(--branco);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  padding: 1.8rem 0;
+  font-weight: 300;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.4em;
+}
+
+.card {
+  width: 210px;
+  height: 270px;
+  border-radius: 15px;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  border: solid 2px #092e40;
+}
+
+.flip__card {
+  transform: rotateY(180deg);
+}
+
+.disabled__card {
+  filter: saturate(0);
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  backface-visibility: hidden;
+}
+
+#form_button {
+  margin-left: 30em;
+  text-align: center;
+  margin-top: 2.5rem;
+  background: var(--bt-primary);
+  color: var(--branco);
+  padding: 1rem 1.5rem;
+  margin-bottom: 3rem;
+  border-radius: 5px;
+  border: solid 2px var(--branco);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#form_button:hover {
+  background-color:var(--bt-hover) ;
+}
+
+@media screen and (max-width: 760px) {
+
+  .titulo {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.2em;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+    padding: 1.2 0;
+    /* line-height: 1.2rem; */
+  }
+
+  .card__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 190px;
+    height: 240px;
+  }
+
+  #form_button {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1120px){
+  #root {
+    height: 100vh;
+    display: block;
+  }
+  .titulo {
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.2em;
+  }
+
+  .subtitulo {
+    font-size: 16 px;
+    padding: 1.2 0;
+    margin: 0 5em;
+  }
+
+  .card__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
