@@ -27,7 +27,7 @@ const App = () => {
   arrayCards.forEach((carta) => {
     cardContainer.innerHTML += `
     <div class="card"  >
-    <div class="face  front"><img src="../${carta.image}.png"></div>
+    <div class="face  front"><img src="../img/${carta.image}.png"></div>
     <div class="face  back" data-nome-jogo="${carta.image}"><img src="../img/verso-card.png"></div>
   </div>
     `;
